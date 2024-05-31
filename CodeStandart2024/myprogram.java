@@ -42,6 +42,8 @@ class Order {
     void add(String var45, int quantity) {
         // this will add the meal and quantity to the order
         var45s.put(var45, quantity);
+
+      
     }
 
     Map<String, Integer> getvar45s() {
@@ -71,6 +73,7 @@ class sumThe_Total {
             var2 += item.getValue();
         }
 
+
         double discount = 0;
         if (var2 > 5) {
             discount = 0.1;
@@ -82,14 +85,17 @@ class sumThe_Total {
 
         // TODO: Add more discounts based on total cost in requirements
         double discountTotal = 0;
-        if (totalC_ > 50) {
-            discountTotal = 10;
-        } else if (totalC_ > 100) {
-            discountTotal = 25;
+        if (totalC_ > 50.00 && totalC_ < 100.00) {
+            discountTotal = 10.00;
+        } else if (totalC_ > 100.00) {
+            discountTotal = 25.00;
         }
         totalC_ = totalC_ - discountTotal;
 
+        
+
         return totalC_;
+        
     }
 }
 
